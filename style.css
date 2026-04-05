@@ -1,27 +1,69 @@
 body {
     text-align: center;
-    font-family: Arial;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #f5e6cc;
 }
 
+/* Board */
 .board {
     display: grid;
-    grid-template-columns: repeat(7, 70px);
-    grid-template-rows: repeat(2, 70px);
-    gap: 10px;
+    grid-template-columns: repeat(7, 80px);
+    grid-template-rows: repeat(2, 80px);
+    gap: 15px;
     justify-content: center;
-    margin-top: 30px;
+    margin: 40px auto;
+    padding: 30px;
+
+    background: linear-gradient(145deg, #c68642, #8b5a2b);
+    border-radius: 40px;
+    box-shadow: 
+        inset 5px 5px 15px #5c3b1e,
+        inset -5px -5px 15px #d9a066,
+        5px 5px 20px rgba(0,0,0,0.3);
 }
 
+/* Pit */
 .pit {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    background-color: burlywood;
-    border: 2px solid black;
+    background: radial-gradient(circle at 30% 30%, #5c3b1e, #2e1b0f);
+
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    gap: 3px;
+    padding: 6px;
+
     cursor: pointer;
-    font-weight: bold;
-    font-size: 18px;
+
+    box-shadow:
+        inset 4px 4px 8px #1a0f08,
+        inset -4px -4px 8px #6b4a2f,
+        2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Seeds */
+.seed {
+    width: 8px;
+    height: 8px;
+    background-color: #f2d16b;
+    border-radius: 50%;
+}
+
+/* Text */
+#status {
+    font-size: 20px;
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #8b5a2b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
